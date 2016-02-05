@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>wndr4300v1刷入OpenWrt固件 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="OpenWrt是什么   OpenWrt是一个用于嵌入式设备的GNU/Linux发行版，具有强大的扩展性。不同于其他许多用于路由器的发行版，OpenWrt是一个从零开始编写的、功能齐全的、容易修改的路由器操作系统。它也内置了包管理工具，你可以从一个软件商店里直接安装软件。比如VPN，SSH，Samba，transmission等等等等。它是个有大量软件包的嵌入式Linux系统，在许多方面它就跟计算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wndr4300v1刷入OpenWrt固件">
+<meta property="og:url" content="http://yoursite.com/2016/02/04/my-new-post/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="OpenWrt是什么   OpenWrt是一个用于嵌入式设备的GNU/Linux发行版，具有强大的扩展性。不同于其他许多用于路由器的发行版，OpenWrt是一个从零开始编写的、功能齐全的、容易修改的路由器操作系统。它也内置了包管理工具，你可以从一个软件商店里直接安装软件。比如VPN，SSH，Samba，transmission等等等等。它是个有大量软件包的嵌入式Linux系统，在许多方面它就跟计算">
+<meta property="og:updated_time" content="2016-02-04T09:21:14.569Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="wndr4300v1刷入OpenWrt固件">
+<meta name="twitter:description" content="OpenWrt是什么   OpenWrt是一个用于嵌入式设备的GNU/Linux发行版，具有强大的扩展性。不同于其他许多用于路由器的发行版，OpenWrt是一个从零开始编写的、功能齐全的、容易修改的路由器操作系统。它也内置了包管理工具，你可以从一个软件商店里直接安装软件。比如VPN，SSH，Samba，transmission等等等等。它是个有大量软件包的嵌入式Linux系统，在许多方面它就跟计算">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/04/my-new-post/" class="article-date">
+  <time datetime="2016-02-04T02:56:21.000Z" itemprop="datePublished">2016-02-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog-Router/">blog Router</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      wndr4300v1刷入OpenWrt固件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="OpenWrt_u662F_u4EC0_u4E48"><a href="#OpenWrt_u662F_u4EC0_u4E48" class="headerlink" title="OpenWrt是什么"></a>OpenWrt是什么</h1><p>   OpenWrt是一个用于嵌入式设备的GNU/Linux发行版，具有强大的扩展性。<br>不同于其他许多用于路由器的发行版，OpenWrt是一个从零开始编写的、功能齐全的、容易修改的路由器操作系统。它也内置了包管理工具，你可以从一个软件商店里直接安装软件。比如VPN，SSH，Samba，transmission等等等等。它是个有大量软件包的嵌入式Linux系统，在许多方面它就跟计算机上的Linux系统一样灵活————虽然它对硬件的约束要高得多。</p>
+<h1 id="u5982_u4F55_u7ED9_u8DEF_u7531_u5668_u5B89_u88C5OpenWrt"><a href="#u5982_u4F55_u7ED9_u8DEF_u7531_u5668_u5B89_u88C5OpenWrt" class="headerlink" title="如何给路由器安装OpenWrt"></a>如何给路由器安装OpenWrt</h1><p>   由于各路由配置不一，下面仅以wdnr4300v1为例，聊聊4300的OpenWrt。</p>
+<h2 id="u51C6_u5907_u5DE5_u4F5C"><a href="#u51C6_u5907_u5DE5_u4F5C" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>一台可插网线的Windows电脑<br>使用Windows仅仅是为了更方便，如果你对Linux更熟悉，当然也可以使用Linux。这里不对操作系统做过多讨论。</li>
+<li>一根网线<br>正品的Netgear提供了一根不错的线，推荐使用。如果线丢了的话，准备一条五类及以上的线，因为wndr4300v1的网口是千兆的，且现在的电脑也大都集成了千兆网卡，使用这样的网线可以直接支持千兆连接。</li>
+<li>一根牙签<br>用牙签插入路由器后盖上的“Restore<br>Factory Settings”键，如果没有也没关系，只要能找到方便插入的工具就OK。</li>
+<li><p>tftp客户端<br>以Windows10（其他Windows版本大同小异）为例：如果你喜欢命令行(CLI)模式可以看方法一，如果喜欢图形界面(GUI)可以看方法二。<br>点击<a href="http://www.shadowsoftware.net/shadowgameworld/downloads/tftp2.exe" target="_blank" rel="external">这里</a>下载tftp客户端。需要注意的是这个图形化的 tftp 客户端工具不支持大小超过 16MB 的文件传输</p>
+</li>
+<li><p>下载OpenWrt固件<br>我们要下载OpenWrt固件，点击<a href="http://downloads.openwrt.org/chaos_calmer/15.05/ar71xx/nand/openwrt-15.05-ar71xx-nand-wndr4300-ubi-factory.img" target="_blank" rel="external">这里</a>下载<br>。<br>下载完成后，我们需要升级当前版本，升级包点击<a href="http://downloads.openwrt.org/chaos_calmer/15.05/ar71xx/nand/openwrt-15.05-ar71xx-nand-wndr4300-squashfs-sysupgrade.tar" target="_blank" rel="external">这里</a>下载。  </p>
+</li>
+</ul>
+<h2 id="u5237_u673A_u51C6_u5907"><a href="#u5237_u673A_u51C6_u5907" class="headerlink" title="刷机准备"></a>刷机准备</h2><ol>
+<li>Windows勾选上“控制面板—程序—程序和功能—启用或关闭Windows功能—tftp客户端”  </li>
+<li>设置计算机IP为192.168.1.2，设置子网掩码为255.255.255.0。</li>
+<li>关闭路由器电源</li>
+<li>将网线的一端插到电脑上，另一端插入路由器的LAN口（最好拔掉接入其他LAN口的设备）</li>
+<li>将牙签的一端插入路由器后盖的”Restore Factory Settings”孔内，按住按钮不要松手，然后给路由器通电。</li>
+<li>等待路由器的电源灯从黄灯变为绿灯并一直在闪烁再松开牙签。  </li>
+</ol>
+<h2 id="u5237_u673A_u65B9_u6CD5"><a href="#u5237_u673A_u65B9_u6CD5" class="headerlink" title="刷机方法"></a>刷机方法</h2><h3 id="u65B9_u6CD5_u4E00"><a href="#u65B9_u6CD5_u4E00" class="headerlink" title="方法一"></a>方法一</h3><ul>
+<li>打开cmd，输入</li>
+</ul>
+<p><code>ping -t 192.168.1.1</code></p>
+<p>以便于监控路由器在刷机过程中的状态。<br>此时应该已ping通并在屏幕上显示<br><code>来自 192.168.1.1 的回复：字节=32 时间&lt;1ms TTL=64</code></p>
+<ul>
+<li>此时打开第二个cmd，并切到OpenWrt固件的存放路径，这里以G:\为例  </li>
+</ul>
+<p><code>G:\</code><br><code>tftp -i 192.168.1.1 PUT xxx.img</code>  </p>
+<p>等待3~5分钟，注意看第一个cmd中是否一直能ping通（持续10s以上）</p>
+<ul>
+<li><p>断电（否则会没有5Ghz的Wi-Fi）  </p>
+<p>  步骤如下  </p>
+<ol>
+<li><p>直接拔掉电源插座，等待5秒左右。（先拔掉电源插座，然后关掉路由器上的开关）  </p>
+<p>2.插上电源插座，等待5秒左右。打开路由器上的开关。  </p>
+</li>
+</ol>
+</li>
+</ul>
+<p>刷机结束！</p>
+<ul>
+<li>把光纤插入WAN口  </li>
+<li>浏览器打开192.168.1.1  </li>
+<li>默认账号：root  默认密码：无。</li>
+</ul>
+<p><strong>Enjoy OpenWrt!</strong></p>
+<h3 id="u65B9_u6CD5_u4E8C"><a href="#u65B9_u6CD5_u4E8C" class="headerlink" title="方法二"></a>方法二</h3><ul>
+<li>点击<a href="http://www.shadowsoftware.net/shadowgameworld/downloads/tftp2.exe" target="_blank" rel="external">这里</a>下载tftp客户端。  </li>
+<li>打开cmd，输入  </li>
+</ul>
+<p><code>ping -t 192.168.1.1</code>  </p>
+<p>以便于监控路由器在刷机过程中的状态。<br>此时应该已ping通并在屏幕上显示<br><code>来自 192.168.1.1 的回复：字节=32 时间&lt;1ms TTL=64</code></p>
+<h4 id="tftp_u5BA2_u6237_u7AEF_u4F7F_u7528_u65B9_u6CD5"><a href="#tftp_u5BA2_u6237_u7AEF_u4F7F_u7528_u65B9_u6CD5" class="headerlink" title="tftp客户端使用方法"></a>tftp客户端使用方法</h4><ol>
+<li>Server填路由器的IP，也就是192.168.1.1</li>
+<li>Password为空</li>
+<li>File填固件所在目录(也就是G:)</li>
+<li>点击Upgrade</li>
+<li>等待3~5分钟,注意看第一个cmd中是否一直能ping通（持续10s以上）</li>
+<li>断电（否则会没有5Ghz的Wi-Fi）<br>（步骤同方法一）</li>
+</ol>
+<p><strong>Enjoy OpenWrt!</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/04/my-new-post/" data-id="cik82tuai00012of4bhg833jz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenWrt4300/">OpenWrt4300</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/02/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog-Router/">blog Router</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenWrt4300/">OpenWrt4300</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/OpenWrt4300/" style="font-size: 10px;">OpenWrt4300</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/02/04/my-new-post/">wndr4300v1刷入OpenWrt固件</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/03/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
