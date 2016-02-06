@@ -2004,7 +2004,7 @@ pre .javascript .function {
     left: 0;
     top: 52px;
     margin: 0;
-    width: 100%;
+    width: auto;
     background: #fff;
     border-bottom: 1px solid #ddd;
   }
